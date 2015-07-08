@@ -7,10 +7,15 @@
 
 header {
 	position: fixed;
+	top: 0;
 	width: 100%;
 	height: var(--topbar-height);
 
 	background-color: #333;
+}
+
+#content {
+	margin-top: var(--topbar-height);
 }
 
 #control-panel {
