@@ -7,7 +7,7 @@ var
 fs.emptyDirSync('dist');
 
 fs.copySync('src/index.html', 'dist/index.html');
-fs.copySync('src/lib/', 'dist/lib');
+fs.copySync('src/js/', 'dist/js');
 
 var postcss = require('postcss');
 
@@ -29,5 +29,6 @@ postcss([
 	//to: 'app.css'
 })
 .then(function(result) {
+	console.log('result');
 	fs.outputFileSync('dist/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
 });
