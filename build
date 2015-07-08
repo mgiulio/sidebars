@@ -1,34 +1,66 @@
 #!/usr/bin/env node
 
 var
-	fs = require('fs-extra')
+	fs = require('fs-extra'),
+	postcss = require('postcss')
 ;
 
 fs.emptyDirSync('dist');
-
 fs.copySync('src/index.html', 'dist/index.html');
-fs.copySync('src/js/', 'dist/js');
 
-var postcss = require('postcss');
+//base();
+customScrollbarOptiScroll();
 
-var input = fs.readFileSync('src/css/style.css', 'utf8');
+function base() {
+	fs.copySync('src/base/index.html', 'dist/base/index.html');
 
-postcss([
-	require('postcss-inline-comment')(),
-	require('postcss-import')({
-		path: 'src/css'}),
-	require('postcss-custom-properties')(),
-	require('postcss-calc')({
-		preserve: false,
-		precision: 5
-	}),
-	require('autoprefixer-core')()
-])
-.process(input, {
-	//from: 'src/app.css',
-	//to: 'app.css'
-})
-.then(function(result) {
-	console.log('result');
-	fs.outputFileSync('dist/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
-});
+	var input = fs.readFileSync('src/css/base/style.css', 'utf8');
+
+	postcss([
+		require('postcss-inline-comment')(),
+		require('postcss-import')({
+			path: 'src/css'}),
+		require('postcss-custom-properties')(),
+		require('postcss-calc')({
+			preserve: false,
+			precision: 5
+		}),
+		require('autoprefixer-core')()
+	])
+	.process(input, {
+		//from: 'src/app.css',
+		//to: 'app.css'
+	})
+	.then(function(result) {
+		fs.outputFileSync('dist/base/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
+	});
+}
+
+function customScrollbarOptiScroll() {
+	//var demo = 'customScrollbarOptiScroll';
+
+	fs.copySync('src/custom-scrollbar-optiscroll/index.html', 'dist/custom-scrollbar-optiscroll/index.html');
+	fs.copySync('src/custom-scrollbar-optiscroll/js/', 'dist/custom-scrollbar-optiscroll/js');
+
+	var input = fs.readFileSync('src/custom-scrollbar-optiscroll/css/style.css', 'utf8');
+
+	postcss([
+		require('postcss-inline-comment')(),
+		require('postcss-import')({
+			path: 'src/custom-scrollbar-optiscroll/css'}),
+		require('postcss-custom-properties')(),
+		require('postcss-calc')({
+			preserve: false,
+			precision: 5
+		}),
+		require('autoprefixer-core')()
+	])
+	.process(input, {
+		//from: 'src/app.css',
+		//to: 'app.css'
+	})
+	.then(function(result) {
+		fs.outputFileSync('dist/custom-scrollbar-optiscroll/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
+	});
+
+}
