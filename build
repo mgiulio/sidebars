@@ -1,0 +1,33 @@
+#!/usr/bin/env node
+
+var
+	fs = require('fs-extra')
+;
+
+fs.emptyDirSync('dist');
+
+fs.copySync('src/index.html', 'dist/index.html');
+fs.copySync('src/lib/', 'dist/lib');
+
+var postcss = require('postcss');
+
+var input = fs.readFileSync('src/css/style.css', 'utf8');
+
+postcss([
+	require('postcss-inline-comment')(),
+	require('postcss-import')({
+		path: 'src/css'}),
+	require('postcss-custom-properties')(),
+	require('postcss-calc')({
+		preserve: false,
+		precision: 5
+	}),
+	require('autoprefixer-core')()
+])
+.process(input, {
+	//from: 'src/app.css',
+	//to: 'app.css'
+})
+.then(function(result) {
+	fs.outputFileSync('dist/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
+});
