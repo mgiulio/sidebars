@@ -5,21 +5,23 @@ var
 	postcss = require('postcss')
 ;
 
-fs.emptyDirSync('dist');
+//fs.emptyDirSync('dist');
 fs.copySync('src/index.html', 'dist/index.html');
 
-//base();
-customScrollbarOptiScroll();
+base();
+//customScrollbarOptiScroll();
 
 function base() {
+	fs.emptyDirSync('dist/base');
+
 	fs.copySync('src/base/index.html', 'dist/base/index.html');
 
-	var input = fs.readFileSync('src/css/base/style.css', 'utf8');
+	var input = fs.readFileSync('src/base/css/style.css', 'utf8');
 
 	postcss([
 		require('postcss-inline-comment')(),
 		require('postcss-import')({
-			path: 'src/css'}),
+			path: 'src/base/css'}),
 		require('postcss-custom-properties')(),
 		require('postcss-calc')({
 			preserve: false,
@@ -38,6 +40,8 @@ function base() {
 
 function customScrollbarOptiScroll() {
 	//var demo = 'customScrollbarOptiScroll';
+
+	fs.emptyDirSync('dist/custom-scrollbar-optiscroll');
 
 	fs.copySync('src/custom-scrollbar-optiscroll/index.html', 'dist/custom-scrollbar-optiscroll/index.html');
 	fs.copySync('src/custom-scrollbar-optiscroll/js/', 'dist/custom-scrollbar-optiscroll/js');
