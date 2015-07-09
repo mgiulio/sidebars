@@ -18,7 +18,15 @@ header {
 	margin-top: var(--topbar-height);
 }
 
-#control-panel {
+#main {
+	margin-left: var(--panel-width);
+	padding: 10px;
+}
+#main p {
+	margin-top: 0;
+}
+
+.control-panel {
 	position: fixed;
 	box-sizing: border-box;
 	top: 0;
@@ -34,22 +42,3 @@ header {
 	background-color: #666;
 	color: #aaa;
 }
-#control-panel .optiscroll {
-	height: 100%;
-}
-
-#main {
-	margin-left: var(--panel-width);
-	padding: 10px;
-}
-#main p {
-	margin-top: 0;
-}
-
-/*
-footer {
-	padding: 20px 0;
-	background-color: #333;
-	border-top: 3px solid lime;
-}
-*/
