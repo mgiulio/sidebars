@@ -223,7 +223,7 @@ header {
 	margin-left: 300px;
 	padding: 10px;
 }
-#main p {
+#main > *:first-child {
 	margin-top: 0;
 }
 

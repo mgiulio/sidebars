@@ -27,7 +27,7 @@ header {
 	margin-left: var(--panel-width);
 	padding: 10px;
 }
-#main p {
+#main > *:first-child {
 	margin-top: 0;
 }
 
