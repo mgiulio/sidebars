@@ -5,47 +5,70 @@
 	--panel-width: 300px;
 }
 
+html {
+	background-color: gray(94%);
+	color: gray(54%);
+}
+
 header {
 	position: fixed;
+	top: 0;
 	width: 100%;
 	height: var(--topbar-height);
 
-	background-color: #333;
+	background-color: gray(67%);
 }
 
-#control-panel {
-	position: fixed;
-	top: 0;
-	left: 0;
+#content {
 	margin-top: var(--topbar-height);
-	box-sizing: border-box;
-	width: var(--panel-width);
-	bottom: 0;
-	overflow: auto;
-
-	padding: 10px;
-
-	background-color: #666;
-	color: #aaa;
-}
-#control-panel .optiscroll {
-	height: 100%;
 }
 
 #main {
 	margin-left: var(--panel-width);
 	padding: 10px;
 }
-#main p {
+#main > *:first-child {
 	margin-top: 0;
 }
 
-/*
-footer {
-	padding: 20px 0;
-	background-color: #333;
-	border-top: 3px solid lime;
+.control-panel {
+	position: fixed;
+	box-sizing: border-box;
+	top: 0;
+	bottom: 0;
+	margin-top: var(--topbar-height);
+	left: 0;
+	width: var(--panel-width);
+
+	overflow: auto;
+
+	padding: 10px;
+
+	background-color: gray(87%);
 }
-*/
+.control-panel .section {
+	margin-top: 0;
+	text-align: center;
+
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.control-panel input[type="text"], .control-panel select {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+
+	border-radius: 3px;
+
+	background-color: gray(90%);
+	border: 1px solid gray(73%);
+}
+.control-panel label {
+	//font-size: 14px;
+}
+.control-panel .optiscroll {
+	height: 100%;
+}
 
 @import 'optiscroll.css';

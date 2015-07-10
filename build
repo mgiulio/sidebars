@@ -9,7 +9,7 @@ var
 fs.copySync('src/index.html', 'dist/index.html');
 
 base();
-//customScrollbarOptiScroll();
+customScrollbarOptiScroll();
 
 function base() {
 	fs.emptyDirSync('dist/base');
@@ -59,6 +59,7 @@ function customScrollbarOptiScroll() {
 			preserve: false,
 			precision: 5
 		}),
+		require('postcss-color-gray')(),
 		require('autoprefixer-core')()
 	])
 	.process(input, {
