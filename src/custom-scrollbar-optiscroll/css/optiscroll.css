@@ -49,7 +49,7 @@
   position: absolute;
   opacity: 0;
   cursor: default;
-  
+
   -webkit-transform: translate(0%, 0%);
   -moz-transform: translate(0%, 0%);
   -ms-transform: translate(0%, 0%);
@@ -85,7 +85,7 @@
  *  Prevent iOS page bounce
  *  even when content is not longer enough.
  *
- *  Remember: enabling the page bounce fix will prevent 
+ *  Remember: enabling the page bounce fix will prevent
  *  nested scroll areas to scroll the parent.
  */
 
@@ -137,9 +137,9 @@
 .optiscroll-v,
 .optiscroll-h {
   background: transparent;
-  
-  /* Scrollbars are visible only on hover */ 
-  opacity: 0; 
+
+  /* Scrollbars are visible only on hover */
+  opacity: 0;
   -webkit-transition: opacity 0.2s ease 0s;
   -moz-transition: opacity 0.2s ease 0s;
   -ms-transition: opacity 0.2s ease 0s;
@@ -163,10 +163,10 @@
 }
 
 /* Avoid overapping while both scrollbars are enabled */
-.vtrack-on.htrack-on > .optiscroll-v { 
+.vtrack-on.htrack-on > .optiscroll-v {
   bottom: 8px;
 }
-.vtrack-on.htrack-on > .optiscroll-h { 
+.vtrack-on.htrack-on > .optiscroll-h {
   right: 8px;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .optiscroll-vtrack {
-  width: 3px;
+  width: 6px;
   right: 4px;
 }
 
@@ -195,4 +195,3 @@
 .optiscroll-htrack:active {
   background: rgba(0,0,0,0.5);
 }
-
