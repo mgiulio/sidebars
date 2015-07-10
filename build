@@ -21,7 +21,8 @@ function base() {
 	postcss([
 		require('postcss-inline-comment')(),
 		require('postcss-import')({
-			path: 'src/base/css'}),
+			path: 'src/base/css'
+		}),
 		require('postcss-custom-properties')(),
 		require('postcss-calc')({
 			preserve: false,

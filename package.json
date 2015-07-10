@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "Giulio 'mgiulio' Mainardi",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer-core": "^5.2.1",
