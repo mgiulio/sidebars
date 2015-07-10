@@ -6,8 +6,8 @@
 }
 
 html {
-	background: #eee;
-	color: #888;
+	background: gray(94%);
+	color: gray(54%);
 }
 
 header {
@@ -16,7 +16,7 @@ header {
 	width: 100%;
 	height: var(--topbar-height);
 
-	background-color: #B0AFAF;
+	background-color: gray(67%);
 }
 
 #content {
@@ -44,8 +44,7 @@ header {
 
 	padding: 10px;
 
-	background-color: #ddd;
-	color: #888;
+	background-color: gray(87%);
 }
 .control-panel .section {
 	margin-top: 0;
@@ -63,7 +62,6 @@ header {
 
 	border-radius: 3px;
 
-	background-color: #e4e3e3;
-	color: #888;
-	border: 1px solid #bbb;
+	background-color: gray(90%);
+	border: 1px solid gray(73%);
 }

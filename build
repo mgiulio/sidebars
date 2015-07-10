@@ -27,6 +27,7 @@ function base() {
 			preserve: false,
 			precision: 5
 		}),
+		require('postcss-color-gray')(),
 		require('autoprefixer-core')()
 	])
 	.process(input, {

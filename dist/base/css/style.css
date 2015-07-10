@@ -202,8 +202,8 @@ samp {
 }
 
 html {
-	background: #eee;
-	color: #888;
+	background: rgb(240, 240, 240);
+	color: rgb(138, 138, 138);
 }
 
 header {
@@ -212,7 +212,7 @@ header {
 	width: 100%;
 	height: 40px;
 
-	background-color: #B0AFAF;
+	background-color: rgb(171, 171, 171);
 }
 
 #content {
@@ -240,8 +240,7 @@ header {
 
 	padding: 10px;
 
-	background-color: #ddd;
-	color: #888;
+	background-color: rgb(222, 222, 222);
 }
 .control-panel .section {
 	margin-top: 0;
@@ -259,7 +258,6 @@ header {
 
 	border-radius: 3px;
 
-	background-color: #e4e3e3;
-	color: #888;
-	border: 1px solid #bbb;
+	background-color: rgb(229, 229, 229);
+	border: 1px solid rgb(186, 186, 186);
 }
