@@ -236,9 +236,9 @@ header {
 	left: 0;
 	width: 300px;
 
-	overflow: auto;
+	overflow: hidden;
 
-	padding: 10px;
+	padding: 0px;
 
 	background-color: rgb(222, 222, 222);
 }
@@ -264,6 +264,13 @@ header {
 }
 .control-panel .optiscroll {
 	height: 100%;
+}
+.control-panel__content {
+	padding: 10px;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
 }
 
 /**************************************
@@ -436,14 +443,16 @@ header {
 
 .optiscroll-vtrack,
 .optiscroll-htrack {
-  background: rgba(0,0,0,0.3);
+  background: rgb(184, 184, 184);
   border-radius: 2px;
-  box-shadow: 0 0 1px #FFF;
 }
 
 .optiscroll-vtrack {
-  width: 6px;
-  right: 4px;
+  width: 4px;
+  right: 3px;
+}
+.optiscroll-vtrack:hover {
+   width: 6px;
 }
 
 .optiscroll-htrack {
@@ -453,5 +462,5 @@ header {
 
 .optiscroll-vtrack:active,
 .optiscroll-htrack:active {
-  background: rgba(0,0,0,0.5);
+  background: rgb(153, 153, 153);
 }

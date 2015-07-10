@@ -176,14 +176,16 @@
 
 .optiscroll-vtrack,
 .optiscroll-htrack {
-  background: rgba(0,0,0,0.3);
+  background: gray(72%);
   border-radius: 2px;
-  box-shadow: 0 0 1px #FFF;
 }
 
 .optiscroll-vtrack {
-  width: 6px;
-  right: 4px;
+  width: 4px;
+  right: 3px;
+}
+.optiscroll-vtrack:hover {
+   width: 6px;
 }
 
 .optiscroll-htrack {
@@ -193,5 +195,5 @@
 
 .optiscroll-vtrack:active,
 .optiscroll-htrack:active {
-  background: rgba(0,0,0,0.5);
+  background: gray(60%);
 }
