@@ -1,21 +1,8 @@
-@import 'normalize-lite.css';
+@import 'common.css';
 
 :root {
 	--topbar-height: 40px;
 	--panel-width: 300px;
-}
-
-html {
-	background-color: gray(94%);
-	color: gray(54%);
-}
-
-a {
-	text-decoration: none;
-	color: gray(70%);
-}
-a:hover {
-	color: gray(40%);
 }
 
 header {
