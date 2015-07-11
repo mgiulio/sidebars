@@ -12,8 +12,6 @@ base();
 customScrollbarOptiScroll();
 
 function master() {
-	fs.copySync('src/index.html', 'dist/index.html');
-
 	var input = fs.readFileSync('src/style.css', 'utf8');
 
 	postcss([
