@@ -1,0 +1,73 @@
+@import '../../common/css/common.css';
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--topbar-height);
+
+	background-color: gray(67%);
+}
+#content {
+	margin-top: var(--topbar-height);
+}
+
+#main {
+	margin-left: var(--panel-width);
+	padding: 10px;
+}
+#main > *:first-child {
+	margin-top: 0;
+}
+
+.control-panel {
+	position: fixed;
+	box-sizing: border-box;
+	top: 0;
+	bottom: 0;
+	margin-top: var(--topbar-height);
+	left: 0;
+	width: var(--panel-width);
+
+	overflow: hidden;
+
+	padding: 0px;
+
+	background-color: gray(87%);
+
+	transform: translate3d(-100%, 0, 0);
+	transition: transform 0.3s ease-out;
+}
+.control-panel.visible {
+	transform: none;
+}
+.control-panel .section {
+	margin-top: 0;
+	text-align: center;
+
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.control-panel input[type="text"], .control-panel select {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+
+	border-radius: 3px;
+
+	background-color: gray(90%);
+	border: 1px solid gray(73%);
+}
+.control-panel label {
+	//font-size: 14px;
+}
+.control-panel .optiscroll {
+	height: 100%;
+}
+.control-panel__content {
+	padding: 10px;
+	user-select: none;
+}
+
+@import 'optiscroll.css';

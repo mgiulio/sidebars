@@ -10,6 +10,7 @@ var
 master();
 base();
 customScrollbarOptiScroll();
+slidein();
 
 function master() {
 	var input = fs.readFileSync('src/style.css', 'utf8');
@@ -66,15 +67,13 @@ function base() {
 	});
 }
 
-function customScrollbarOptiScroll() {
-	//var demo = 'customScrollbarOptiScroll';
+function slidein() {
+	fs.emptyDirSync('dist/slidein-top-optiscroll');
 
-	fs.emptyDirSync('dist/fixed-custom-scrollbar-optiscroll');
+	fs.copySync('src/slidein-top-optiscroll/index.html', 'dist/slidein-top-optiscroll/index.html');
+	fs.copySync('src/slidein-top-optiscroll/js/', 'dist/slidein-top-optiscroll/js');
 
-	fs.copySync('src/fixed-custom-scrollbar-optiscroll/index.html', 'dist/fixed-custom-scrollbar-optiscroll/index.html');
-	fs.copySync('src/fixed-custom-scrollbar-optiscroll/js/', 'dist/fixed-custom-scrollbar-optiscroll/js');
-
-	var input = fs.readFileSync('src/fixed-custom-scrollbar-optiscroll/css/style.css', 'utf8');
+	var input = fs.readFileSync('src/slidein-top-optiscroll/css/style.css', 'utf8');
 
 	postcss([
 		require('postcss-inline-comment')(),
@@ -93,7 +92,37 @@ function customScrollbarOptiScroll() {
 		//to: 'app.css'
 	})
 	.then(function(result) {
-		fs.outputFileSync('dist/fixed-custom-scrollbar-optiscroll/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
+		fs.outputFileSync('dist/slidein-top-optiscroll/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
 	});
+}
 
+	function customScrollbarOptiScroll() {
+		//var demo = 'customScrollbarOptiScroll';
+
+		fs.emptyDirSync('dist/fixed-custom-scrollbar-optiscroll');
+
+		fs.copySync('src/fixed-custom-scrollbar-optiscroll/index.html', 'dist/fixed-custom-scrollbar-optiscroll/index.html');
+		fs.copySync('src/fixed-custom-scrollbar-optiscroll/js/', 'dist/fixed-custom-scrollbar-optiscroll/js');
+
+		var input = fs.readFileSync('src/fixed-custom-scrollbar-optiscroll/css/style.css', 'utf8');
+
+		postcss([
+			require('postcss-inline-comment')(),
+			require('postcss-import')({
+				path: 'src/fixed-custom-scrollbar-optiscroll/css'}),
+			require('postcss-custom-properties')(),
+			require('postcss-calc')({
+				preserve: false,
+				precision: 5
+			}),
+			require('postcss-color-gray')(),
+			require('autoprefixer-core')()
+		])
+		.process(input, {
+			//from: 'src/app.css',
+			//to: 'app.css'
+		})
+		.then(function(result) {
+			fs.outputFileSync('dist/fixed-custom-scrollbar-optiscroll/css/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
+		});
 }
