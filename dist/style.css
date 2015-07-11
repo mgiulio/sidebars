@@ -212,3 +212,42 @@ a {
 a:hover {
    color: rgb(102, 102, 102);
 }
+
+body {
+   margin: 0 auto;
+   width: 700px;
+}
+
+h1 {
+   margin: 10px auto 60px;
+   text-align: center;
+}
+
+ul.demo {
+   width: 50%;
+   margin: 20px auto 60px;
+   padding: 0;
+   list-style: none;
+}
+ul.demo li {
+   border: 1px solid rgb(232, 232, 232);
+   border-bottom: none;
+   border-radius: 5px;
+}
+ul.demo li:last-child {
+   border-bottom: 1px solid rgb(232, 232, 232);
+}
+ul.demo li a {
+   display: block;
+   padding: 10px;
+
+   text-align: center;
+
+   text-transform: uppercase;
+   font-size: 14px;
+
+   background-color: rgb(246, 246, 246);
+}
+ul.demo li a:hover {
+   background-color: rgb(234, 234, 234);
+}
