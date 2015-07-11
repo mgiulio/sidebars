@@ -10,6 +10,14 @@ html {
 	color: gray(54%);
 }
 
+a {
+	text-decoration: none;
+	color: gray(70%);
+}
+a:hover {
+	color: gray(40%);
+}
+
 header {
 	position: fixed;
 	top: 0;
@@ -17,6 +25,18 @@ header {
 	height: var(--topbar-height);
 
 	background-color: gray(67%);
+}
+header a {
+	line-height: var(--topbar-height);
+	margin-left: 20px;
+
+	text-transform: uppercase;
+	font-size: 12px;
+
+	color: gray(90%);
+}
+header a:hover {
+	color: gray(100%);
 }
 
 #content {
