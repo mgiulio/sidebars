@@ -1,0 +1,486 @@
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+/* Lite version */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS and IE text size adjust after device orientation change,
+ *    without disabling user zoom.
+ */
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11
+ * and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background-color: transparent;
+}
+
+/**
+ * Improve readability of focused elements when they are also in an
+ * active/hover state.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+html {
+	background-color: rgb(240, 240, 240);
+	color: rgb(138, 138, 138);
+}
+
+a {
+	text-decoration: none;
+	color: rgb(179, 179, 179);
+}
+a:hover {
+	color: rgb(102, 102, 102);
+}
+
+header a {
+	line-height: 40px;
+	margin-left: 20px;
+
+	text-transform: uppercase;
+	font-size: 12px;
+
+	color: rgb(229, 229, 229);
+}
+header a:hover {
+	color: rgb(255, 255, 255);
+}
+
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 40px;
+
+	background-color: rgb(171, 171, 171);
+}
+#content {
+	margin-top: 40px;
+}
+
+#main {
+	margin-left: 300px;
+	padding: 10px;
+}
+#main > *:first-child {
+	margin-top: 0;
+}
+
+.control-panel {
+	position: fixed;
+	box-sizing: border-box;
+	top: 0;
+	bottom: 0;
+	margin-top: 40px;
+	left: 0;
+	width: 300px;
+
+	overflow: hidden;
+
+	padding: 0px;
+
+	background-color: rgb(222, 222, 222);
+}
+.control-panel .section {
+	margin-top: 0;
+	text-align: center;
+
+	text-transform: uppercase;
+	font-size: 16px;
+}
+.control-panel input[type="text"], .control-panel select {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	padding: 10px;
+
+	border-radius: 3px;
+
+	background-color: rgb(229, 229, 229);
+	border: 1px solid rgb(186, 186, 186);
+}
+.control-panel label {
+}
+.control-panel .optiscroll {
+	height: 100%;
+}
+.control-panel__content {
+	padding: 10px;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+	    -ms-user-select: none;
+	        user-select: none;
+}
+
+/**************************************
+ *  Optiscroll container base style
+ */
+
+.optiscroll {
+  position: relative;
+  overflow: hidden;
+}
+
+.optiscroll-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: auto;
+  z-index: 1;
+  -webkit-overflow-scrolling: touch;
+}
+
+
+/**************************************
+ *  Optiscroll scrollbars base style
+ */
+
+.optiscroll-v,
+.optiscroll-h {
+  position: absolute;
+  z-index: 2;
+  -webkit-backface-visibility: hidden;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.optiscroll-v { right: 0; }
+.optiscroll-h { bottom: 0; }
+
+
+/**************************************
+ *  Optiscroll tracks base style
+ */
+
+.optiscroll-vtrack,
+.optiscroll-htrack {
+  display: block;
+  position: absolute;
+  opacity: 0;
+  cursor: default;
+
+  -webkit-transform: translate(0%, 0%);
+  -ms-transform: translate(0%, 0%);
+  transform: translate(0%, 0%);
+  box-sizing: border-box;
+}
+
+
+/* track visible only when enabled */
+.vtrack-on > .optiscroll-v .optiscroll-vtrack { opacity: 1; }
+.htrack-on > .optiscroll-h .optiscroll-htrack { opacity: 1; }
+
+
+/* extend draggable area while dragging */
+.optiscroll-vtrack:active:before,
+.optiscroll-htrack:active:before {
+  content: '';
+  position: absolute;
+  top: -100px;
+  left: -100px;
+  bottom: -100px;
+  right: -100px;
+  z-index: 10000;
+}
+
+
+
+/**************************************
+ *  Prevent iOS page bounce
+ *  even when content is not longer enough.
+ *
+ *  Remember: enabling the page bounce fix will prevent
+ *  nested scroll areas to scroll the parent.
+ */
+
+/* Uncomment to prevent VERTICAL iOS page bounce. */
+/*
+.optiscroll-nobounce > .optiscroll-content:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  border-bottom: 2px solid transparent;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+*/
+
+
+/* Uncomment to prevent HORIZONTAL iOS page bounce. */
+/*
+.optiscroll-nobounce > .optiscroll-content:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  border-right: 2px solid transparent;
+
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+}
+*/
+
+
+
+/**************************************
+ *  CUSTOM STYLE
+ *  feel free to change stuff
+ **************************************/
+
+/***
+ ***  Scrollbars style  ***/
+
+.optiscroll-v,
+.optiscroll-h {
+  background: transparent;
+
+  /* Scrollbars are visible only on hover */
+  opacity: 0;
+  -webkit-transition: opacity 0.2s ease 0s;
+  transition: opacity 0.2s ease 0s;
+}
+
+.optiscroll.vtrack-on:hover > .optiscroll-v { opacity: 1; }
+.optiscroll.htrack-on:hover > .optiscroll-h { opacity: 1; }
+
+.optiscroll-v {
+  top: 4px;
+  bottom: 4px;
+  width: 0;
+}
+
+.optiscroll-h {
+  left: 4px;
+  right: 4px;
+  height: 0;
+}
+
+/* Avoid overapping while both scrollbars are enabled */
+.vtrack-on.htrack-on > .optiscroll-v {
+  bottom: 8px;
+}
+.vtrack-on.htrack-on > .optiscroll-h {
+  right: 8px;
+}
+
+
+/***
+ ***  Tracks style  ***/
+
+.optiscroll-vtrack,
+.optiscroll-htrack {
+  background: rgb(184, 184, 184);
+  border-radius: 2px;
+}
+
+.optiscroll-vtrack {
+  width: 4px;
+  right: 3px;
+}
+.optiscroll-vtrack:hover {
+   width: 6px;
+}
+
+.optiscroll-htrack {
+  height: 3px;
+  bottom: 4px;
+}
+
+.optiscroll-vtrack:active,
+.optiscroll-htrack:active {
+  background: rgb(153, 153, 153);
+}
