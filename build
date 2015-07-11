@@ -6,10 +6,38 @@ var
 ;
 
 //fs.emptyDirSync('dist');
-fs.copySync('src/index.html', 'dist/index.html');
 
+master();
 base();
 customScrollbarOptiScroll();
+
+function master() {
+	fs.copySync('src/index.html', 'dist/index.html');
+
+	var input = fs.readFileSync('src/style.css', 'utf8');
+
+	postcss([
+		require('postcss-inline-comment')(),
+		require('postcss-import')({
+			path: 'src/'
+		}),
+		require('postcss-custom-properties')(),
+		require('postcss-calc')({
+			preserve: false,
+			precision: 5
+		}),
+		require('postcss-color-gray')(),
+		require('autoprefixer-core')()
+	])
+	.process(input, {
+		//from: 'src/app.css',
+		//to: 'app.css'
+	})
+	.then(function(result) {
+		fs.outputFileSync('dist/style.css', result.css); //fs.writeFileSync('dist/style.css', result.css);
+	});
+}
+
 
 function base() {
 	fs.emptyDirSync('dist/base');
