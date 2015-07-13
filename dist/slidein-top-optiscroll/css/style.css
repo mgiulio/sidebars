@@ -259,14 +259,14 @@ header a:hover {
  * Sidebar content
  */
 
- .control-panel .section {
+ .sidebar .section {
  	margin-top: 0;
  	text-align: center;
 
  	text-transform: uppercase;
  	font-size: 16px;
  }
- .control-panel input[type="text"], .control-panel select {
+ .sidebar input[type="text"], .sidebar select {
  	display: block;
  	box-sizing: border-box;
  	width: 100%;
@@ -277,7 +277,7 @@ header a:hover {
  	background-color: rgb(229, 229, 229);
  	border: 1px solid rgb(186, 186, 186);
  }
- .control-panel label {
+ .sidebar label {
  	//font-size: 14px;
  }
 
@@ -286,7 +286,7 @@ header a:hover {
 	padding-top: 10px;
 }
 
-.control-panel {
+.sidebar {
 	position: fixed;
 	box-sizing: border-box;
 	top: 0;
@@ -304,13 +304,13 @@ header a:hover {
 	        transition: transform 0.3s ease-out;
 }
 
-.control-panel.visible {
+.sidebar.visible {
 	-webkit-transform: none;
 	    -ms-transform: none;
 	        transform: none;
 }
 
-.control-panel .toggle-visibility {
+.sidebar .toggle-visibility {
 	position: absolute;
 	width: 32px;
 	height: 32px;
@@ -323,7 +323,7 @@ header a:hover {
 	background-color: rgb(222, 222, 222);
 }
 
-.control-panel .toggle-visibility:before {
+.sidebar .toggle-visibility:before {
 	position: absolute;
 	top: 50%;
 	left: 50%;
@@ -336,16 +336,16 @@ header a:hover {
 	content: '>';
 }
 
-.control-panel.visible .toggle-visibility:before {
+.sidebar.visible .toggle-visibility:before {
 	-webkit-transform: translate(-50%, -50%) rotate(180deg);
 	    -ms-transform: translate(-50%, -50%) rotate(180deg);
 	        transform: translate(-50%, -50%) rotate(180deg);
 }
 
-.control-panel .optiscroll {
+.sidebar .optiscroll {
 	height: 100%;
 }
-.control-panel__content {
+.sidebar__content {
 	padding: 10px;
 	-webkit-user-select: none;
 	   -moz-user-select: none;

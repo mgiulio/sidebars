@@ -1,6 +1,6 @@
 @import '../../common/css/common.css';
 
-.control-panel {
+.sidebar {
 	position: fixed;
 	box-sizing: border-box;
 	top: 0;
@@ -16,11 +16,11 @@
 	background-color: gray(87%);
 }
 
-.control-panel .optiscroll {
+.sidebar .optiscroll {
 	height: 100%;
 }
 
-.control-panel__content {
+.sidebar__content {
 	padding: 10px;
 	user-select: none;
 }

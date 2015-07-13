@@ -34,10 +34,10 @@
 			<p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
 
 		</div>
-		<aside id="control-panel" class="control-panel">
+		<aside id="sidebar" class="sidebar">
 			<a class="toggle-visibility" href="#"></a>
 			<div class="optiscroll">
-				<div class="control-panel__content optiscroll-content">
+				<div class="sidebar__content optiscroll-content">
 					<form>
 						<h2 class="section">Section #1</h2>
 						<p>
@@ -122,9 +122,9 @@
 		init();
 
 		function init() {
-			sidebar = document.querySelector('.control-panel');
+			sidebar = document.querySelector('.sidebar');
 
-			new Optiscroll(sidebar.querySelector('.control-panel .optiscroll'));
+			new Optiscroll(sidebar.querySelector('.sidebar .optiscroll'));
 
 			document.body.addEventListener('click', function(e) {
 				if (!e.target.classList.contains('toggle-visibility'))

@@ -62,14 +62,14 @@ header a:hover {
  * Sidebar content
  */
 
- .control-panel .section {
+ .sidebar .section {
  	margin-top: 0;
  	text-align: center;
 
  	text-transform: uppercase;
  	font-size: 16px;
  }
- .control-panel input[type="text"], .control-panel select {
+ .sidebar input[type="text"], .sidebar select {
  	display: block;
  	box-sizing: border-box;
  	width: 100%;
@@ -80,6 +80,6 @@ header a:hover {
  	background-color: gray(90%);
  	border: 1px solid gray(73%);
  }
- .control-panel label {
+ .sidebar label {
  	//font-size: 14px;
  }
