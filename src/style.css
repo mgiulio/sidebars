@@ -18,14 +18,31 @@ body {
 }
 
 h1 {
-   margin: 10px auto 60px;
+   margin: 10px auto 20px;
+
    text-align: center;
+}
+h2 {
+   margin-bottom: 60px;
+
+   text-align: center;
+
+   font-family: georgia;
+   font-weight: normal;
+   font-style: italic;
+   font-size: 1.1em;
+
+   color: #aaa;
+}
+
+ul {
+   padding: 0;
+   list-style-position: inside;
 }
 
 ul.demo {
    width: 70%;
    margin: 20px auto 60px;
-   padding: 0;
    list-style: none;
 }
 ul.demo li {
@@ -40,13 +57,10 @@ ul.demo li a {
    display: block;
    padding: 10px;
 
-   text-align: center;
-
-   text-transform: uppercase;
    font-size: 14px;
 
    background-color: gray(246);
 }
 ul.demo li a:hover {
-   background-color: gray(234);
+   background-color: gray(253);
 }
