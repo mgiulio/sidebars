@@ -209,6 +209,8 @@ html {
 a {
 	text-decoration: none;
 	color: rgb(179, 179, 179);
+	-webkit-transition: color 0.3s;
+	        transition: color 0.3s;
 }
 a:hover {
 	color: rgb(102, 102, 102);
