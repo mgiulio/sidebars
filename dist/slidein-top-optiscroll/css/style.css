@@ -240,11 +240,15 @@ header {
 }
 
 #main {
-	margin-left: 300px;
-	padding: 10px;
+	margin: 10px 150px;
+	padding-top: 10px;
 }
 #main > *:first-child {
 	margin-top: 0;
+}
+#main ul {
+	padding: 0;
+	list-style-position: inside;
 }
 
 .control-panel {
