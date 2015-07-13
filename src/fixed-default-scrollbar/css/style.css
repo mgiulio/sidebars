@@ -1,31 +1,5 @@
 @import '../../common/css/common.css';
 
-:root {
-	--topbar-height: 40px;
-	--panel-width: 300px;
-}
-
-header {
-	position: fixed;
-	top: 0;
-	width: 100%;
-	height: var(--topbar-height);
-
-	background-color: gray(67%);
-}
-
-#content {
-	margin-top: var(--topbar-height);
-}
-
-#main {
-	margin-left: var(--panel-width);
-	padding: 10px;
-}
-#main > *:first-child {
-	margin-top: 0;
-}
-
 .control-panel {
 	position: fixed;
 	box-sizing: border-box;
@@ -40,25 +14,4 @@ header {
 	padding: 10px;
 
 	background-color: gray(87%);
-}
-.control-panel .section {
-	margin-top: 0;
-	text-align: center;
-
-	text-transform: uppercase;
-	font-size: 16px;
-}
-.control-panel input[type="text"], .control-panel select {
-	display: block;
-	box-sizing: border-box;
-	width: 100%;
-	padding: 10px;
-
-	border-radius: 3px;
-
-	background-color: gray(90%);
-	border: 1px solid gray(73%);
-}
-.control-panel label {
-	//font-size: 14px;
 }

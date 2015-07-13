@@ -19,6 +19,15 @@ a:hover {
 	color: gray(40%);
 }
 
+header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: var(--topbar-height);
+
+	background-color: gray(67%);
+}
+
 header a {
 	line-height: var(--topbar-height);
 	margin-left: 20px;
@@ -31,3 +40,46 @@ header a {
 header a:hover {
 	color: gray(100%);
 }
+
+#content {
+	margin-top: var(--topbar-height);
+}
+
+#main {
+	margin-left: var(--panel-width);
+	padding: 10px;
+}
+#main > *:first-child {
+	margin-top: 0;
+}
+
+#main ul {
+	padding: 0;
+	list-style-position: inside;
+}
+
+/*
+ * Sidebar content
+ */
+
+ .control-panel .section {
+ 	margin-top: 0;
+ 	text-align: center;
+
+ 	text-transform: uppercase;
+ 	font-size: 16px;
+ }
+ .control-panel input[type="text"], .control-panel select {
+ 	display: block;
+ 	box-sizing: border-box;
+ 	width: 100%;
+ 	padding: 10px;
+
+ 	border-radius: 3px;
+
+ 	background-color: gray(90%);
+ 	border: 1px solid gray(73%);
+ }
+ .control-panel label {
+ 	//font-size: 14px;
+ }
