@@ -180,12 +180,12 @@
   border-radius: 2px;
 }
 
-.optiscroll-vtrack {
-  width: 4px;
-  right: 3px;
+:root {
+   --sidebar-padding-right: 20px;
 }
-.optiscroll-vtrack:hover {
-   width: 6px;
+.optiscroll-vtrack {
+  width: calc(var(--sidebar-padding-right) / 2);
+  right: calc(var(--sidebar-padding-right) / 4);
 }
 
 .optiscroll-htrack {
@@ -195,5 +195,5 @@
 
 .optiscroll-vtrack:active,
 .optiscroll-htrack:active {
-  background: gray(60%);
+  background: gray(50%);
 }

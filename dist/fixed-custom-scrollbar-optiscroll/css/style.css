@@ -303,6 +303,7 @@ header a:hover {
 
 .sidebar__content {
 	padding: 10px;
+	padding-right: 20px;
 	-webkit-user-select: none;
 	   -moz-user-select: none;
 	    -ms-user-select: none;
@@ -482,13 +483,9 @@ header a:hover {
   background: rgb(184, 184, 184);
   border-radius: 2px;
 }
-
 .optiscroll-vtrack {
-  width: 4px;
-  right: 3px;
-}
-.optiscroll-vtrack:hover {
-   width: 6px;
+  width: 10px;
+  right: 5px;
 }
 
 .optiscroll-htrack {
@@ -498,5 +495,5 @@ header a:hover {
 
 .optiscroll-vtrack:active,
 .optiscroll-htrack:active {
-  background: rgb(153, 153, 153);
+  background: rgb(127, 127, 127);
 }
